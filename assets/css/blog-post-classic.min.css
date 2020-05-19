@@ -1,0 +1,11 @@
+/**
+*  This minified file is only for Classic post
+*
+* @package Articled
+* @since Articled 1.0
+*
+*/
+
+.post-thumbnail .video-frame{background-color:black;border-radius:15px;height:400px}.post-thumbnail .video-frame iframe{height:400px!important;width:100%;border-radius:15px}.post-thumbnail{display:block;width:100%;height:auto;padding:0 7.5px}.post-thumbnail img{width:100%;height:370px}.post-info{display:block;width:100%;padding:15px}.post-header,.post-excerpt,.post-options{display:block;width:85%;margin:auto}.post-options{padding-top:10px}.continue-post,.share-button{display:inline-block;padding:0 15px}.blog-post-title{font-size:23px;margin-top:0;margin-bottom:2px;letter-spacing:.8px}
+
+/* You can start your css from below */

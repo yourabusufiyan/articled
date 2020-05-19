@@ -1,0 +1,288 @@
+/**
+*  Theme Main Animation and transition CSS File.
+*
+* @package Articled
+* @since Articled 1.0
+*
+*/
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: #e6e6e6
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b1b1b
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000
+}
+
+.icon-blue,
+.icon-green,
+.icon-orange,
+.icon-red,
+.icon-brown,
+.icon-gray,
+.icon-greenblue,
+.icon-beige,
+.icon-purple {
+    color: transparent;
+    background-clip: text
+}
+
+.icon-blue {
+    background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%)
+}
+
+.icon-green {
+    background-image: linear-gradient(315deg, #9be15d 0%, #00e3ae 100%)
+}
+
+.icon-orange {
+    background-image: linear-gradient(135deg, #FDD819 10%, #E80505 100%)
+}
+
+.icon-red {
+    background-image: linear-gradient(45deg, #FF512F 20%, #DD2476 100%)
+}
+
+.icon-brown {
+    background-image: linear-gradient(135deg, #FFAA85 10%, #B3315F 100%)
+}
+
+.icon-gray {
+    background-image: linear-gradient(135deg, #616161 0%, #9bc5c3 100%)
+}
+
+.icon-greenblue {
+    background-image: linear-gradient(0deg, #209cff 0%, #68e0cf 100%)
+}
+
+.icon-beige {
+    background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%)
+}
+
+.icon-purple {
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%)
+}
+
+.btn {
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer
+}
+
+.success {
+    background-color: #4CAF50
+}
+
+.success:hover {
+    background-color: #46a049
+}
+
+.success-border {
+    color: #4CAF50;
+    border: 2px solid #4CAF50
+}
+
+.success-border:hover {
+    background-color: #46a049;
+    color: white
+}
+
+.info {
+    background-color: #2196F3
+}
+
+.info:hover {
+    background-color: #0b7dda
+}
+
+.info-border {
+    color: #2196F3;
+    border: 2px solid #2196F3
+}
+
+.info-border:hover {
+    background-color: #0b7dda;
+    color: white
+}
+
+.warning {
+    background-color: #ff9800
+}
+
+.warning:hover {
+    background-color: #e68a00
+}
+
+.warning-border {
+    color: #ff9800;
+    border: 2px solid #ff9800
+}
+
+.warning-border:hover {
+    background-color: #e68a00;
+    color: white
+}
+
+.danger {
+    background-color: #f44336
+}
+
+.danger:hover {
+    background-color: #da190b
+}
+
+.danger-border {
+    color: #f44336;
+    border: 2px solid #f44336
+}
+
+.danger-border:hover {
+    background-color: #da190b;
+    color: white
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    border-radius: 5px
+}
+
+.prev-slider,
+.next-slider {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white!important;
+    font-weight: 700;
+    font-size: 18px;
+    transition: 0.6s ease;
+    background: rgba(0, 0, 0, .3);
+    margin: 0 15px
+}
+
+.next-slider {
+    right: 0
+}
+
+.prev-slider:hover,
+.next-slider:hover {
+    background-color: rgba(0, 0, 0, .8)
+}
+
+.img-slider {
+    display: none;
+    position: relative
+}
+
+.active-slide {
+    display: block
+}
+
+.slider-infos {
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    box-shadow: 0 5px 20px 0 rgba(255, 255, 255, .1);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px
+}
+
+.slider-caption {
+    padding: 8px 14px
+}
+
+.slider-number {
+    padding: 8px 14px;
+    right: 0;
+    position: absolute;
+    top: 0;
+    letter-spacing: 3px
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 5px;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    padding: 8px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px
+}
+
+.single .slide-caption,
+.single-post .slide-caption {
+    bottom: 0
+}
+
+.dot-sliders {
+    text-align: center;
+    margin-top: 4px
+}
+
+.dot-sliders .slide-img-prw {
+    display: inline-block
+}
+
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #ccc9c9;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease
+}
+
+.active,
+.dot:hover {
+    background-color: #4e4e4e
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
