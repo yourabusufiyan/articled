@@ -36,7 +36,7 @@
          <!-- Post Meta  -->
           <div class="single-post-meta">
               <p></span>
-                  <?php echo get_the_date( get_option( 'date_format' ) , get_the_id() ) ?><span class="time"> <?php esc_html_e( 'at', 'articled' ) ?> <?php the_time( get_option( 'time_format' ) ); ?></span>
+                  <?php echo esc_html( get_the_date( get_option( 'date_format' ) , get_the_id() ) ) ?><span class="time"> <?php esc_html_e( 'at', 'articled' ) ?> <?php the_time( get_option( 'time_format' ) ); ?></span>
                   <span class="category"> <?php esc_html_e( 'In', 'articled' ) ?> <?php the_category(', '); ?></span>
                   <span class="comments"><a href="<?php the_permalink()?>#single-comments"><?php articled_comments_count( get_comments_number() );?></a></span>
                   <?php
