@@ -117,6 +117,7 @@ if( ! function_exists( 'articled_load' ) ) {
 
 defined('ARTICLED_DIR')      or define('ARTICLED_DIR',  get_template_directory() .'/' );
 defined('ARTICLED_URI' )     or define('ARTICLED_URI',  get_template_directory_uri().'/' );
+defined('ARTICLED_VERSION' ) or define('ARTICLED_VERSION',  '1.2.2' );
 
 // assets
 defined('ARTICLED_CSS')      or define('ARTICLED_CSS',     articled_dir( ARTICLED_URI . 'assets/css/'));
@@ -135,19 +136,15 @@ defined('ARTICLED_HEADER')   or define('ARTICLED_HEADER',  articled_dir( ARTICLE
 defined('ARTICLED_FOOTER')   or define('ARTICLED_FOOTER',  articled_dir( ARTICLED_TEMPLATES . 'footer/'));
 defined('ARTICLED_PARTS')    or define('ARTICLED_PARTS',   articled_dir( ARTICLED_TEMPLATES . 'blog/'));
 
-
 // articled wp website contents width
 if( !isset($content_width) ) $content_width = 900;
 
-global $articled_options;
-$articled_options = get_option( 'articled_theme', [] );
 articled_load( 'inc', ARTICLED_INC );
 articled_load( 'templates', ARTICLED_TEMPLATES );
 
 // Register Navigations
 function articled_register_menus () {
    register_nav_menus( array(
-    'top-menu'   => __( 'Top Bar Menus', 'articled'),
     'main-menu' => __( 'Main Menus', 'articled')
    ));
 };

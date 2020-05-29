@@ -4,7 +4,7 @@ Theme URI:   https://github.com/yourabusufiyan/articled
 Author:      Abu Sufiyan
 Author URI:  https://www.abusufiyan.com/
 Description: Articled is a WordPress theme for personal blog. It comes with flexible layouts and option. Articled personal blog theme mixes between classic and minimal and more styles will help you create a simple and clean blog. If You are a blogger and don’t need to have an experiment to set up your WordPress personal blog, it's super simple and easy to set up. The default skin was black and white, but we believe not everyone like this kind of color, that’s why we deliver this theme with a custom skin settings, that allow you to change the skin with the color pickers in the customizer.
-Version:     1.2.0
+Version:     1.2.2
 License:     GNU GENERAL PUBLIC LICENSE
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 Text Domain: articled
@@ -1496,7 +1496,6 @@ table th,table td {
 .post-navs .screen-reader-text {
 	display: none;
 }
-/
 
 
 /*  Sidebar */
@@ -1657,7 +1656,7 @@ table th,table td {
 .post_format-post-format-audio .wp-playlist-current-item .wp-playlist-caption .wp-playlist-item-title {
   font-size: 1.7em;
   font-weight: 600;
-  space-letter: 3px
+  letter-spacing: 3px
 }
 .post_format-post-format-audio .wp-playlist-caption .wp-playlist-item-album:before, .wp-playlist-caption .wp-playlist-item-artist:before {
   margin-right: 5px;

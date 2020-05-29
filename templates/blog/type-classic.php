@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   
     <div class="post-header">
       <?php articled_title(); ?>
-      <?php get_template_part( 'templates/post-meta'); ?>
+      <?php get_template_part( 'templates/contents/post-meta'); ?>
     </div>
 
     <div class="post-excerpt">

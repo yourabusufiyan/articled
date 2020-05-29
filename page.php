@@ -31,7 +31,7 @@ get_header();
 
 
             <!-- Breadcrumb  -->
-              <?php get_template_part( 'templates/breadcrumb' ); ?>
+              <?php get_template_part( 'templates/contents/breadcrumb' ); ?>
             <!-- End Breadcrumb  -->
 
            <?php if( have_posts() ) : while( have_posts() ) : the_post()  ?>

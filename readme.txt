@@ -5,7 +5,7 @@ Author:       Abu Sufiyan
 Author URI:   http://www.abusufiyan.com/
 Donate link:  paypal.me/yourabusufiyan
 Contributors: yourabusufiyan
-Version:      1.2.0
+Version:      1.2.1
 Tested up to: 5.1.0
 Requires PHP: 5.6
 Stable tag:   5.6
@@ -78,6 +78,13 @@ Removed Some Feature was not complited with WordPress.org
 
 
 == Changelog ==
+
+= 1.2.2 =
+* Added: Theme Page
+
+= 1.2.1 =
+* Added: options
+* Fixed Up Template loading
 
 = 1.2.0 =
 * Fixed Up everything

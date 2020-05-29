@@ -19,7 +19,7 @@
   	<div id="slider-container" class="slider-container">
   		<span class="sliderclose"><i class="fas fa-times"></i></span>
   		<div class="slider-content">
-        <?php get_template_part( 'templates/slider' ) ?>
+        <?php get_template_part( 'templates/contents/slider' ) ?>
   		</div>
   	</div>
     <!-- End Slider Container -->

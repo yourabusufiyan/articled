@@ -52,4 +52,17 @@ $e_blog_layout = apply_filters( 'articled_blog_post', $e_blog_layout );
 articled_load( 'functions', ARTICLED_FUNC ); 
 articled_load( 'frontend', ARTICLED_FRONT );
 articled_load( 'widgets', ARTICLED_INC ); 
+articled_load( 'classes/notice.class', ARTICLED_INC );
+
+
+function articled_theme_menu() {
+    add_theme_page( __('Articled Theme', 'articled'), __('Articled Theme', 'articled'), 'edit_theme_options', 'articled-theme', 'articled_theme_page' );
+}
+add_action( 'admin_menu', 'articled_theme_menu' );
+ 
+function articled_theme_page() {
+   echo '<div class="wrap about__container"><h1></h1>';
+      get_template_part( 'templates/theme-page' );
+   echo '</div>';
+}
 

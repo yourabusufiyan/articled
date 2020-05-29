@@ -36,7 +36,7 @@
          <!-- Post Meta  -->
           <div class="single-post-meta">
               <p></span>
-                  <?php echo esc_html( get_the_date( get_option( 'date_format' ) , get_the_id() ) ) ?><span class="time"> <?php esc_html_e( 'at', 'articled' ) ?> <?php the_time( get_option( 'time_format' ) ); ?></span>
+                  <?php echo get_the_date( get_option( 'date_format' ) , get_the_id() ) ?><span class="time"> <?php esc_html_e( 'at', 'articled' ) ?> <?php the_time( get_option( 'time_format' ) ); ?></span>
                   <span class="category"> <?php esc_html_e( 'In', 'articled' ) ?> <?php the_category(', '); ?></span>
                   <span class="comments"><a href="<?php the_permalink()?>#single-comments"><?php articled_comments_count( get_comments_number() );?></a></span>
                   <?php
@@ -57,7 +57,7 @@
     <div class="clearfix"></div>
 
     <!-- Breadcrumb  -->
-      <?php get_template_part( 'templates/breadcrumb' ); ?>
+      <?php get_template_part( 'templates/contents/breadcrumb' ); ?>
     <!-- End Breadcrumb  -->
 
     <main class="posts-contents row" role="complementary">
@@ -110,21 +110,21 @@
               <?php function articled_single_tags() { global $post;?>
                 <!-- Tags -->
                 <div class="single-post-tags-area">
-                    <h3> <?php _e('Tags', 'articled'); ?> : </h3>
                     <?php 
-                      $tags = get_the_tags($post->ID); 
-                      if ( count($tags) > 0 ) {
+                      $tags = get_the_tags($post->ID);
+                      if ( is_object($tags) && count($tags) ) {
+                        echo '<h3> ' . _e('Tags', 'articled') . ' : </h3>';
                         echo '<ul class="single-post-tags">';
                         foreach($tags as $tag){
                             echo '<li>';
-                              echo '<a class="single-tag" href="'. home_url() .'/tag/'. esc_attr( $tag->slug ) . '">';
+                              echo '<a class="single-tag" href="'. esc_url( home_url() .'/tag/'. $tag->slug ) . '">';
                                 echo esc_html( $tag->name );
                               echo '</a>';
                             echo '</li>';
                           } 
                         echo '</ul>';
                       } else {
-                        echo '<h4 style="display: inline">"' . __('Oppps! Empty', 'articled') . ' <i class="fas fa-frown"></i>"</h4>';
+                        echo '<h4 style="display: inline">"' . __('Oppps! Tags are empty!', 'articled') . ' <i class="fas fa-frown"></i>"</h4>';
                       }
                     ?>
                 </div>
@@ -135,7 +135,7 @@
               <?php function articled_single_author_details() { ?>
                   <!-- Post Author  -->
                   <div class="post-author-info">
-                      <?php get_template_part('templates/author-info') ?>
+                      <?php get_template_part('templates/contents/author-info') ?>
                   </div>
                   <!-- End Post Author  -->
               <?php }?>
@@ -176,7 +176,7 @@
 
     <?php function articled_bottom_related_post() { ?>
     <!-- Releted Posts -->
-      <?php get_template_part('templates/related-posts') ?>
+      <?php get_template_part('templates/contents/related-posts') ?>
     <!-- End Releted Posts -->
     <?php } ?>
 
@@ -200,7 +200,7 @@
     <?php function articled_bottom_post_nav() { ?>
       <!-- Next and Previous Posts -->
       <div class="post-navigations">
-         <?php get_template_part('templates/post-nav') ?>
+         <?php get_template_part('templates/contents/post-nav') ?>
       </div>
       <!-- End Next and Previous Posts -->
     <?php } ?>
